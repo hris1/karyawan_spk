@@ -58,7 +58,7 @@ class SubKriteriaTableSeeder extends Seeder
             'nilai_max'=>25,
             'kategori'=>'(Kategori Usia 1)',
             'crips'=>'-',
-            'bobot'=>20,
+            'bobot'=>100,
         ]);
 
         SubKriteria::create([
@@ -67,7 +67,7 @@ class SubKriteriaTableSeeder extends Seeder
             'nilai_max'=>30,
             'kategori'=>'(Kategori Usia 2)',
             'crips'=>'-',
-            'bobot'=>40,
+            'bobot'=>80,
         ]);
 
         SubKriteria::create([
@@ -85,7 +85,7 @@ class SubKriteriaTableSeeder extends Seeder
             'nilai_max'=>50,
             'kategori'=>'(Kategori Usia 4)',
             'crips'=>'-',
-            'bobot'=>80,
+            'bobot'=>40,
         ]);
 
         SubKriteria::create([
@@ -94,18 +94,18 @@ class SubKriteriaTableSeeder extends Seeder
             'nilai_max'=>55,
             'kategori'=>'(Kategori Usia 5)',
             'crips'=>'-',
-            'bobot'=>100,
+            'bobot'=>20,
         ]);
 
 
 
-        // Pengalaman
+        // Ujian Praktek
         SubKriteria::create([
             'kriteria_id'=>3,
             'nilai_min'=>null,
             'nilai_max'=>null,
             'kategori'=>null,
-            'crips'=>'Tidak Ada',
+            'crips'=>'C',
             'bobot'=>20,
         ]);
 
@@ -114,7 +114,7 @@ class SubKriteriaTableSeeder extends Seeder
             'nilai_min'=>null,
             'nilai_max'=>null,
             'kategori'=>null,
-            'crips'=>'1 tahun',
+            'crips'=>'BC',
             'bobot'=>40,
         ]);
 
@@ -123,7 +123,7 @@ class SubKriteriaTableSeeder extends Seeder
             'nilai_min'=>null,
             'nilai_max'=>null,
             'kategori'=>null,
-            'crips'=>'2 tahun',
+            'crips'=>'B',
             'bobot'=>60,
         ]);
 
@@ -132,7 +132,7 @@ class SubKriteriaTableSeeder extends Seeder
             'nilai_min'=>null,
             'nilai_max'=>null,
             'kategori'=>null,
-            'crips'=>'3 tahun',
+            'crips'=>'AB',
             'bobot'=>80,
         ]);
 
@@ -141,7 +141,7 @@ class SubKriteriaTableSeeder extends Seeder
             'nilai_min'=>null,
             'nilai_max'=>null,
             'kategori'=>null,
-            'crips'=>'>3 tahun',
+            'crips'=>'A',
             'bobot'=>100,
         ]);
 
@@ -153,7 +153,7 @@ class SubKriteriaTableSeeder extends Seeder
             'nilai_min'=>null,
             'nilai_max'=>null,
             'kategori'=>null,
-            'crips'=>'<4',
+            'crips'=>'C',
             'bobot'=>20,
         ]);
 
@@ -162,7 +162,7 @@ class SubKriteriaTableSeeder extends Seeder
             'nilai_min'=>null,
             'nilai_max'=>null,
             'kategori'=>null,
-            'crips'=>'4',
+            'crips'=>'BC',
             'bobot'=>40,
         ]);
 
@@ -171,7 +171,7 @@ class SubKriteriaTableSeeder extends Seeder
             'nilai_min'=>null,
             'nilai_max'=>null,
             'kategori'=>null,
-            'crips'=>'5',
+            'crips'=>'B',
             'bobot'=>60,
         ]);
 
@@ -180,7 +180,7 @@ class SubKriteriaTableSeeder extends Seeder
             'nilai_min'=>null,
             'nilai_max'=>null,
             'kategori'=>null,
-            'crips'=>'6',
+            'crips'=>'AB',
             'bobot'=>80,
         ]);
 
@@ -189,7 +189,7 @@ class SubKriteriaTableSeeder extends Seeder
             'nilai_min'=>null,
             'nilai_max'=>null,
             'kategori'=>null,
-            'crips'=>'7',
+            'crips'=>'A',
             'bobot'=>100,
         ]);
 

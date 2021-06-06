@@ -1,10 +1,16 @@
 
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item active mb-5">
+          <li class="nav-item active mb-2">
             <a class="nav-link" href="{{route('tambah_data')}}">
               <i class="material-icons">add</i>
               <p>Tambah Data</p>
+            </a>
+          </li>
+          <li class="nav-item active mb-5">
+            <a class="nav-link" href="{{route('lihat_data')}}">
+              <i class="material-icons">edit_note</i>
+              <p>Edit Data </p>
             </a>
           </li>
           <li class="nav-item active  ">

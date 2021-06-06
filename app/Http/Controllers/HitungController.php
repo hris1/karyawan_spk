@@ -15,26 +15,32 @@ class HitungController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($kategori,$pendidikan,$dokumen,$wawancara,$pengalaman)
+    public function index($kategori,$pendidikan,$dokumen,$wawancara,$ujian_praktek, 
+            $IDkategori, $IDpendidikan, $IDdokumen, $IDwawancara, $IDujian_praktek)
     {
         $output['nilaikategori'] = SubKriteria::where('kategori', $kategori)
             ->orWhere('crips',$kategori)
+            ->where('kriteria_id', $IDkategori)
             ->with('kriteria')
             ->first();
         $output['nilaipendidikan'] = SubKriteria::where('kategori', $pendidikan)
             ->orWhere('crips',$pendidikan)
+            ->where('kriteria_id', $IDpendidikan)
             ->with('kriteria')
             ->first();
         $output['nilaidokumen'] = SubKriteria::where('kategori', $dokumen)
             ->orWhere('crips',$dokumen)
+            ->where('kriteria_id', $IDdokumen)
             ->with('kriteria')
             ->first();
         $output['nilaiwawancara'] = SubKriteria::where('kategori', $wawancara)
             ->orWhere('crips',$wawancara)
+            ->where('kriteria_id', $IDwawancara)
             ->with('kriteria')
             ->first();
-        $output['nilaipengalaman'] = SubKriteria::where('kategori', $pengalaman)
-            ->orWhere('crips',$pengalaman)
+        $output['nilaiujian_praktek'] = SubKriteria::where('kategori', $ujian_praktek)
+            ->orWhere('crips',$ujian_praktek)
+            ->where('kriteria_id', $IDujian_praktek)
             ->with('kriteria')
             ->first();
         // dd($output);

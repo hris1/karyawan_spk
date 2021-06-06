@@ -20,7 +20,7 @@ class CreateAlternatifsTable extends Migration
             $table->string('pendidikan');
             $table->string('dokumen');
             $table->string('wawancara');
-            $table->string('pengalaman');
+            $table->string('ujian_praktek');
             $table->timestamps();
         });
     }

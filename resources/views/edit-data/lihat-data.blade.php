@@ -27,7 +27,7 @@
                 <p>Data Kriteria</p>
             </a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item">
             <a class="nav-link" href="{{route('subKriteria')}}">
                 <i class="material-icons">library_books</i>
                 <p>Data Sub Kriteria</p>
@@ -56,65 +56,46 @@
 @endsection
 
 @section('navbar-brand')
-<a class="navbar-brand" href="javascript:;">Data Sub-Kriteria</a>
+<a class="navbar-brand" href="javascript:;">Edit Data</a>
 @endsection
 
 @section('content')
 <div class="col-md-12">
     <div class="card">
         <div class="card-header card-header-primary">
-            <h4 class="card-title ">Data Sub-Kriteria</h4>
+            <h4 class="card-title ">Pilih data yang akan di edit</h4>
             {{-- <p class="card-category"> Here is a subtitle for this table</p> --}}
         </div>
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table">
                     <thead class=" text-primary">
-                        <th>
-                            No
-                        </th>
-                        <th>
-                            Kode
-                        </th>
-                        <th>
-                            Keterangan
-                        </th>
-                        <th>
-                            Atribut
-                        </th>
-                        <th>
-                            Batasan
-                        </th>
-                        <th>
-                            Crips
-                        </th>
-                        <th>
-                            Bobot
-                        </th>
+                        <th scope="col">No.</th>
+                        <th scope="col">No. Pendaftaran</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">No. Telepon</th>
+                        <th scope="col">Pendidikan</th>
+                        <th scope="col">Usia</th>
+                        <th scope="col">Ujian Praktek</th>
+                        <th scope="col">Kelengkapan Dokumen</th>
+                        <th scope="col">Hasil Wawancara</th>
+                        <th scope="col">#</th>
                     </thead>
                     <tbody>
-                        @foreach ($subKriteria as $sub => $s)
+                        @foreach ($edit_data as $count => $a)
                         <tr>
+                            <td>{{$count+1}}</td>
+                            <td>{{$a->karyawan->no_pendaftaran}}</td>
+                            <td>{{$a->karyawan->nama}}</td>
+                            <td>{{$a->karyawan->no_telp}}</td>
+                            <td>{{$a->pendidikan}}</td>
+                            <td>{{$a->karyawan->usia}} {{$a->kategori_usia}}</td>
+                            <td>{{$a->ujian_praktek}}</td>
+                            <td>{{$a->dokumen}}</td>
+                            <td>{{$a->wawancara}}</td>
                             <td>
-                                {{$sub +1 }}
-                            </td>
-                            <td>
-                                {{$s->kriteria->kode}}
-                            </td>
-                            <td>
-                                {{$s->kriteria->keterangan}}
-                            </td>
-                            <td>
-                                {{$s->kriteria->atribut}}
-                            </td>
-                            <td>
-                                {{$s->nilai_min}} - {{$s->nilai_max}} {{$s->kategori}}
-                            </td>
-                            <td>
-                                {{$s->crips}}
-                            </td>
-                            <td>
-                                {{$s->bobot}}
+                                <a href="{{route('edit_data', $a->karyawan->id)}}" class="btn btn-primary"
+                                    style="width: 40px; height: 30px; text-align: center; padding: 8px 10px; text-transform: none">Edit</a>
                             </td>
                         </tr>
                         @endforeach
@@ -123,7 +104,7 @@
             </div>
         </div>
     </div>
-    <a href="{{route('home')}}" class="btn btn-danger pull-right">Kembali</a>
+    <a href="{{route('home')}}" class="btn btn-primary pull-right">Kembali</a>
 </div>
 @endsection
 

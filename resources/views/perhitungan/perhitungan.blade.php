@@ -3,10 +3,16 @@
 @section('menu')
 <div class="sidebar-wrapper">
     <ul class="nav">
-        <li class="nav-item active mb-5">
+        <li class="nav-item active mb-2">
             <a class="nav-link" href="{{route('tambah_data')}}">
                 <i class="material-icons">add</i>
                 <p>Tambah Data</p>
+            </a>
+        </li>
+        <li class="nav-item active mb-5">
+            <a class="nav-link" href="{{route('lihat_data')}}">
+                <i class="material-icons">edit_note</i>
+                <p>Edit Data </p>
             </a>
         </li>
         <li class="nav-item">
@@ -58,7 +64,8 @@
     <div class="card">
         <div class="card-header card-header-primary mb-5">
             <h4 class="card-title ">Data Sebelum Normalisasi</h4>
-            <p class="card-category"> Keterangan : K1 = Tingkat Pendidikan, K2 = Usia, K3 = Pengalaman, K4 = Kelengkapan
+            <p class="card-category"> Keterangan : K1 = Tingkat Pendidikan, K2 = Usia, K3 = Ujian Praktek, K4 =
+                Kelengkapan
                 Dokumen, K5 = Wawancara</p>
         </div>
         <div class="card-body">
@@ -129,7 +136,8 @@
     <div class="card">
         <div class="card-header card-header-primary mb-5">
             <h4 class="card-title ">Data Setelah Normalisasi</h4>
-            <p class="card-category"> Keterangan : K1 = Tingkat Pendidikan, K2 = Usia, K3 = Pengalaman, K4 = Kelengkapan
+            <p class="card-category"> Keterangan : K1 = Tingkat Pendidikan, K2 = Usia, K3 = Ujian Praktek, K4 =
+                Kelengkapan
                 Dokumen, K5 = Wawancara</p>
         </div>
         <div class="card-body">
@@ -201,6 +209,7 @@
             </div>
         </div>
     </div>
+    <a href="{{route('home')}}" class="btn btn-danger pull-right">Kembali</a>
 </div>
 @endsection
 

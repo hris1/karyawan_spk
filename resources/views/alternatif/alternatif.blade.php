@@ -3,10 +3,16 @@
 @section('menu')
 <div class="sidebar-wrapper">
     <ul class="nav">
-        <li class="nav-item active mb-5">
+        <li class="nav-item active mb-2">
             <a class="nav-link" href="{{route('tambah_data')}}">
                 <i class="material-icons">add</i>
                 <p>Tambah Data</p>
+            </a>
+        </li>
+        <li class="nav-item active mb-5">
+            <a class="nav-link" href="{{route('lihat_data')}}">
+                <i class="material-icons">edit_note</i>
+                <p>Edit Data </p>
             </a>
         </li>
         <li class="nav-item">
@@ -68,12 +74,11 @@
                         <th scope="col">No. Pendaftaran</th>
                         <th scope="col">Nama</th>
                         <th scope="col">No. Telepon</th>
-                        <th scope="col">Usia</th>
                         <th scope="col">Pendidikan</th>
+                        <th scope="col">Usia</th>
+                        <th scope="col">Ujian Praktek</th>
                         <th scope="col">Kelengkapan Dokumen</th>
                         <th scope="col">Hasil Wawancara</th>
-                        <th scope="col">Pengalaman Kerja</th>
-                        <th scope="col">#</th>
                     </thead>
                     <tbody>
                         @foreach ($alternatif as $count => $a)
@@ -82,15 +87,11 @@
                             <td>{{$a->karyawan->no_pendaftaran}}</td>
                             <td>{{$a->karyawan->nama}}</td>
                             <td>{{$a->karyawan->no_telp}}</td>
-                            <td>{{$a->karyawan->usia}} {{$a->kategori_usia}}</td>
                             <td>{{$a->pendidikan}}</td>
+                            <td>{{$a->karyawan->usia}} {{$a->kategori_usia}}</td>
+                            <td>{{$a->ujian_praktek}}</td>
                             <td>{{$a->dokumen}}</td>
                             <td>{{$a->wawancara}}</td>
-                            <td>{{$a->pengalaman}}</td>
-                            <td>
-                                <a href="" class="btn btn-primary"
-                                    style="width: 40px; height: 30px; text-align: center; padding: 8px 10px; text-transform: none">Edit</a>
-                            </td>
                         </tr>
                         @endforeach
                     </tbody>
@@ -98,7 +99,7 @@
             </div>
         </div>
     </div>
-    <a href="{{route('home')}}" class="btn btn-primary pull-right">Kembali</a>
+    <a href="{{route('home')}}" class="btn btn-danger pull-right">Kembali</a>
 </div>
 @endsection
 

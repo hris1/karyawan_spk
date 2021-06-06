@@ -16,7 +16,7 @@ class KriteriaTableSeeder extends Seeder
             'kode'=>'k1',
             'keterangan'=>'Tingkat Pendidikan',
             'atribut'=>'Benefit',
-            'bobot'=>'25',
+            'bobot'=>'20',
         ]);
 
         Kriteria::create([
@@ -28,23 +28,23 @@ class KriteriaTableSeeder extends Seeder
 
         Kriteria::create([
             'kode'=>'k3',
-            'keterangan'=>'Pengalaman',
+            'keterangan'=>'Ujian Praktek',
             'atribut'=>'Benefit',
-            'bobot'=>'25',
+            'bobot'=>'30',
         ]);
 
         Kriteria::create([
             'kode'=>'k4',
             'keterangan'=>'Kelengkapan Dokumen',
             'atribut'=>'Benefit',
-            'bobot'=>'10',
+            'bobot'=>'15',
         ]);
 
         Kriteria::create([
             'kode'=>'k5',
             'keterangan'=>'Wawancara',
             'atribut'=>'Benefit',
-            'bobot'=>'30',
+            'bobot'=>'25',
         ]);
     }
 }
