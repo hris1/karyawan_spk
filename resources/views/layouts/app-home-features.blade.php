@@ -109,6 +109,8 @@ The above copyright notice and this permission notice shall be included in all c
         </div>
     </div>
 
+    @include('sweetalert::alert')
+
 
     @yield('script')
     <!--   Core JS Files   -->

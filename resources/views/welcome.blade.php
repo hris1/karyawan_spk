@@ -26,7 +26,6 @@
                                         id="submit-button">Kembali ke menu utama</a>
                                 </div>
                             </div>
-                            <li><a href="" class="animsition-link">Home</a></li>
                             @else
                             <div class="col-md-6" style="margin-right: -8%">
                                 <div class="input-group-append" style="width: 120px">

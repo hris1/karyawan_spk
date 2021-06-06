@@ -40,5 +40,13 @@ Route::get('/tambah-data', 'TambahDataController@index')->name('tambah_data');
 
 Route::post('/store-data', 'TambahDataController@store')->name('store_data');
 
+Route::get('/lihat-data', 'TambahDataController@show')->name('lihat_data');
+
+Route::get('/edit-data/{id}', 'TambahDataController@edit')->name('edit_data');
+
+Route::post('/update-data/{id}', 'TambahDataController@update')->name('update_data');
+
+Route::post('/hapus-data/{id}', 'TambahDataController@destroy')->name('hapus_data');
+
 // Perhitungan
 Route::get('/perhitungan', 'HitungController@show')->name('perhitungan');

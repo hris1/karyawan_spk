@@ -3,10 +3,16 @@
 @section('menu')
 <div class="sidebar-wrapper">
     <ul class="nav">
-        <li class="nav-item active mb-5">
+        <li class="nav-item active mb-2">
             <a class="nav-link" href="{{route('tambah_data')}}">
                 <i class="material-icons">add</i>
                 <p>Tambah Data</p>
+            </a>
+        </li>
+        <li class="nav-item active mb-5">
+            <a class="nav-link" href="{{route('lihat_data')}}">
+                <i class="material-icons">edit_note</i>
+                <p>Edit Data </p>
             </a>
         </li>
         <li class="nav-item">
@@ -79,9 +85,6 @@
                         <th>
                             Bobot
                         </th>
-                        <th>
-                            #
-                        </th>
                     </thead>
                     <tbody>
                         @foreach ($kriteria as $krit => $k)
@@ -101,10 +104,6 @@
                             <td>
                                 {{$k->bobot}}
                             </td>
-                            <td>
-                                <a href="" class="btn btn-primary"
-                                    style="width: 40px; height: 30px; text-align: center; padding: 8px 10px; text-transform: none">Edit</a>
-                            </td>
                         </tr>
                         @endforeach
                     </tbody>
@@ -112,7 +111,7 @@
             </div>
         </div>
     </div>
-    <a href="{{route('home')}}" class="btn btn-primary pull-right">Kembali</a>
+    <a href="{{route('home')}}" class="btn btn-danger pull-right">Kembali</a>
 </div>
 @endsection
 

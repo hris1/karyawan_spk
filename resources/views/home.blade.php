@@ -5,7 +5,7 @@
 @endsection
 
 @section('navbar-brand')
-<a class="navbar-brand" href="javascript:;">Beranda</a>
+<a class="navbar-brand" href="{{route('home')}}">Beranda</a>
 @endsection
 
 @section('content')
@@ -26,7 +26,7 @@
         <div class="card-footer">
             <div class="stats">
                 <i class="material-icons text-primary">visibility</i>
-                <a href="javascript:;">lihat selengkapnya</a>
+                <a href="{{route('kriteria')}}">lihat selengkapnya</a>
             </div>
         </div>
     </div>
@@ -49,7 +49,7 @@
         <div class="card-footer">
             <div class="stats">
                 <i class="material-icons text-primary">visibility</i>
-                <a href="javascript:;">lihat selengkapnya</a>
+                <a href="{{route('subKriteria')}}">lihat selengkapnya</a>
             </div>
         </div>
     </div>
@@ -72,7 +72,7 @@
         <div class="card-footer">
             <div class="stats">
                 <i class="material-icons text-primary">visibility</i>
-                <a href="javascript:;">lihat selengkapnya</a>
+                <a href="{{route('karyawan')}}">lihat selengkapnya</a>
             </div>
         </div>
     </div>
@@ -95,7 +95,7 @@
         <div class="card-footer">
             <div class="stats">
                 <i class="material-icons text-primary">visibility</i>
-                <a href="javascript:;">lihat selengkapnya</a>
+                <a href="{{route('alternatif')}}">lihat selengkapnya</a>
             </div>
         </div>
     </div>
@@ -118,7 +118,7 @@
         <div class="card-footer">
             <div class="stats">
                 <i class="material-icons text-primary">visibility</i>
-                <a href="javascript:;">lihat selengkapnya</a>
+                <a href="{{route('perhitungan')}}">lihat selengkapnya</a>
             </div>
         </div>
     </div>

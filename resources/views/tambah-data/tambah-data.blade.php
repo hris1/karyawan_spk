@@ -3,10 +3,16 @@
 @section('menu')
 <div class="sidebar-wrapper">
     <ul class="nav">
-        <li class="nav-item active mb-5">
+        <li class="nav-item active mb-2">
             <a class="nav-link" href="{{route('tambah_data')}}">
                 <i class="material-icons">add</i>
                 <p>Tambah Data</p>
+            </a>
+        </li>
+        <li class="nav-item active mb-5">
+            <a class="nav-link" href="{{route('lihat_data')}}">
+                <i class="material-icons">edit_note</i>
+                <p>Edit Data </p>
             </a>
         </li>
         <li class="nav-item">
@@ -40,7 +46,7 @@
             </a>
         </li>
         <li class="nav-item ">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="{{route('perhitungan')}}">
                 <i class="material-icons">calculate</i>
                 <p>Hasil Perhitungan</p>
             </a>
@@ -114,6 +120,18 @@
                 </div>
                 <p style="font-size: 24px" class="mt-5"><strong>Data Alternatif</strong></p>
                 <div class="row">
+                    
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="bmd-label-floating">Pendidikan</label>
+                            <select name="pendidikan" id="pendidikan" class="form-control">
+                                <option selected disabled>Pilih Pendidikan Terakhir</option>
+                                @foreach($pendidikan as $pr)
+                                <option value="{{$pr->crips}}">{{$pr->crips}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label class="bmd-label-floating">Kategori Usia</label>
@@ -128,16 +146,19 @@
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label class="bmd-label-floating">Pendidikan</label>
-                            <select name="pendidikan" id="pendidikan" class="form-control">
-                                <option selected disabled>Pilih Pendidikan Terakhir</option>
-                                @foreach($pendidikan as $pr)
-                                <option value="{{$pr->crips}}">{{$pr->crips}}</option>
+                            <label class="bmd-label-floating">Ujian Praktek</label>
+                            <select name="ujian_praktek" id="ujian_praktek" class="form-control">
+                                <option value="" disabled selected>Pilih Hasil Ujian Praktek</option>
+                                @foreach($ujian_praktek as $s)
+                                <option value="{{$s->crips}}">{{$s->crips}}</option>
                                 @endforeach
                             </select>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                </div>
+                <div class="row">
+                    
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label class="bmd-label-floating">Kelengkapan Dokumen</label>
                             <select name="dokumen" id="dokumen" class="form-control">
@@ -148,8 +169,6 @@
                             </select>
                         </div>
                     </div>
-                </div>
-                <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="bmd-label-floating">Hasil Wawancara</label>
@@ -157,17 +176,6 @@
                                 <option value="" disabled selected>Pilih Hasil Wawancara</option>
                                 @foreach($wawancara as $ni)
                                 <option value="{{$ni->crips}}">{{$ni->crips}}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="bmd-label-floating">Pengalaman Kerja</label>
-                            <select name="pengalaman" id="pengalaman" class="form-control">
-                                <option value="" disabled selected>Pilih Pengalaman Kerja</option>
-                                @foreach($pengalaman as $s)
-                                <option value="{{$s->crips}}">{{$s->crips}}</option>
                                 @endforeach
                             </select>
                         </div>
