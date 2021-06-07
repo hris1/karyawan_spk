@@ -22,8 +22,7 @@ The above copyright notice and this permission notice shall be included in all c
     </title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
-    <link rel="stylesheet" type="text/css"
-        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <!-- CSS Files -->
     <link href="{{asset('template/home-features/assets/css/material-dashboard.css?v=2.1.2')}}" rel="stylesheet" />
@@ -43,14 +42,12 @@ The above copyright notice and this permission notice shall be included in all c
         input[type=number] {
             -moz-appearance: textfield;
         }
-
     </style>
 </head>
 
 <body class="">
     <div class="wrapper ">
-        <div class="sidebar" data-color="purple" data-background-color="white"
-            data-image="{{asset('template/home-features/assets/img/sidebar-1.jpg')}}">
+        <div class="sidebar" data-color="purple" data-background-color="white" data-image="{{asset('template/home-features/assets/img/sidebar-1.jpg')}}">
             <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
@@ -69,8 +66,7 @@ The above copyright notice and this permission notice shall be included in all c
                     <div class="navbar-wrapper">
                         @yield('navbar-brand')
                     </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="navbar-toggler-icon icon-bar"></span>
                         <span class="navbar-toggler-icon icon-bar"></span>
@@ -79,8 +75,7 @@ The above copyright notice and this permission notice shall be included in all c
                     <div class="collapse navbar-collapse justify-content-end">
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown">
-                                <a class="nav-link" href="javascript:;" id="navbarDropdownProfile"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="material-icons">person</i>
                                     <p class="d-lg-none d-md-block">
                                         Account
@@ -158,8 +153,8 @@ The above copyright notice and this permission notice shall be included in all c
     <!-- Material Dashboard DEMO methods, don't include it in your project! -->
     <script src="{{asset('template/home-features/assets/demo/demo.js')}}"></script>
     <script>
-        $(document).ready(function () {
-            $().ready(function () {
+        $(document).ready(function() {
+            $().ready(function() {
                 $sidebar = $('.sidebar');
 
                 $sidebar_img_container = $sidebar.find('.sidebar-background');
@@ -179,7 +174,7 @@ The above copyright notice and this permission notice shall be included in all c
 
                 }
 
-                $('.fixed-plugin a').click(function (event) {
+                $('.fixed-plugin a').click(function(event) {
                     // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
                     if ($(this).hasClass('switch-trigger')) {
                         if (event.stopPropagation) {
@@ -190,7 +185,7 @@ The above copyright notice and this permission notice shall be included in all c
                     }
                 });
 
-                $('.fixed-plugin .active-color span').click(function () {
+                $('.fixed-plugin .active-color span').click(function() {
                     $full_page_background = $('.full-page-background');
 
                     $(this).siblings().removeClass('active');
@@ -211,7 +206,7 @@ The above copyright notice and this permission notice shall be included in all c
                     }
                 });
 
-                $('.fixed-plugin .background-color .badge').click(function () {
+                $('.fixed-plugin .background-color .badge').click(function() {
                     $(this).siblings().removeClass('active');
                     $(this).addClass('active');
 
@@ -222,7 +217,7 @@ The above copyright notice and this permission notice shall be included in all c
                     }
                 });
 
-                $('.fixed-plugin .img-holder').click(function () {
+                $('.fixed-plugin .img-holder').click(function() {
                     $full_page_background = $('.full-page-background');
 
                     $(this).parent('li').siblings().removeClass('active');
@@ -233,7 +228,7 @@ The above copyright notice and this permission notice shall be included in all c
 
                     if ($sidebar_img_container.length != 0 && $(
                             '.switch-sidebar-image input:checked').length != 0) {
-                        $sidebar_img_container.fadeOut('fast', function () {
+                        $sidebar_img_container.fadeOut('fast', function() {
                             $sidebar_img_container.css('background-image', 'url("' +
                                 new_image + '")');
                             $sidebar_img_container.fadeIn('fast');
@@ -245,7 +240,7 @@ The above copyright notice and this permission notice shall be included in all c
                         var new_image_full_page = $('.fixed-plugin li.active .img-holder').find(
                             'img').data('src');
 
-                        $full_page_background.fadeOut('fast', function () {
+                        $full_page_background.fadeOut('fast', function() {
                             $full_page_background.css('background-image', 'url("' +
                                 new_image_full_page + '")');
                             $full_page_background.fadeIn('fast');
@@ -269,7 +264,7 @@ The above copyright notice and this permission notice shall be included in all c
                     }
                 });
 
-                $('.switch-sidebar-image input').change(function () {
+                $('.switch-sidebar-image input').change(function() {
                     $full_page_background = $('.full-page-background');
 
                     $input = $(this);
@@ -301,7 +296,7 @@ The above copyright notice and this permission notice shall be included in all c
                     }
                 });
 
-                $('.switch-sidebar-mini input').change(function () {
+                $('.switch-sidebar-mini input').change(function() {
                     $body = $('body');
 
                     $input = $(this);
@@ -316,7 +311,7 @@ The above copyright notice and this permission notice shall be included in all c
 
                         $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar('destroy');
 
-                        setTimeout(function () {
+                        setTimeout(function() {
                             $('body').addClass('sidebar-mini');
 
                             md.misc.sidebar_mini_active = true;
@@ -324,27 +319,25 @@ The above copyright notice and this permission notice shall be included in all c
                     }
 
                     // we simulate the window Resize so the charts will get updated in realtime.
-                    var simulateWindowResize = setInterval(function () {
+                    var simulateWindowResize = setInterval(function() {
                         window.dispatchEvent(new Event('resize'));
                     }, 180);
 
                     // we stop the simulation of Window Resize after the animations are completed
-                    setTimeout(function () {
+                    setTimeout(function() {
                         clearInterval(simulateWindowResize);
                     }, 1000);
 
                 });
             });
         });
-
     </script>
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             // Javascript method's body can be found in assets/js/demos.js
             md.initDashboardPageCharts();
 
         });
-
     </script>
 </body>
 
