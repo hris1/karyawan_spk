@@ -145,7 +145,7 @@
                 <table class="table">
                     <thead class=" text-primary">
                         <th>
-                            No
+                            RANK
                         </th>
                         <th>
                             No. Pendaftaran
@@ -173,7 +173,27 @@
                         </th>
                     </thead>
                     <tbody>
-                        @foreach ($perhitungan as $count => $p)
+                        @php
+                        $result = [];    
+                        $hasil = [];    
+                        $hasilAvgById = [];    
+                        foreach ($perhitungan as $p) {
+                            array_push($result, (($p->k1 / $perhitunganK1max) * $k1) + (($perhitunganK2min / $p->k2) * $k2) + (($p->k3 / $perhitunganK3max) * $k3) + (($p->k4 / $perhitunganK4max) * $k4) + (($p->k5 / $perhitunganK5max) * $k5));
+                            rsort($result);
+                        }
+                        foreach ($result as $key) {
+                            foreach ($perhitungan as $p) {
+                                if ($key == (($p->k1 / $perhitunganK1max) * $k1) + (($perhitunganK2min / $p->k2) * $k2) + (($p->k3 / $perhitunganK3max) * $k3) + (($p->k4 / $perhitunganK4max) * $k4) + (($p->k5 / $perhitunganK5max) * $k5)) {
+                                    if (!in_array($p->id, $hasilAvgById)) {
+                                        array_push($hasil, $p);
+                                        array_push($hasilAvgById, $p->id);
+                                    }
+                                }
+                            }
+                        }
+                        // print_r($hasil);
+                        @endphp
+                        @foreach ($hasil as $count => $p)
                         <tr>
                             <td>
                                 {{$count +1 }}
@@ -185,22 +205,22 @@
                                 {{$p->karyawan->nama}}
                             </td>
                             <td>
-                                {{$p->k1 / $perhitunganK1max}}
+                                {{number_format($p->k1 / $perhitunganK1max,2)}}
                             </td>
                             <td>
-                                {{$perhitunganK2min / $p->k2}}
+                                {{number_format($perhitunganK2min / $p->k2,2)}}
                             </td>
                             <td>
-                                {{$p->k3 / $perhitunganK3max}}
+                                {{number_format($p->k3 / $perhitunganK3max,2)}}
                             </td>
                             <td>
-                                {{$p->k4 / $perhitunganK4max}}
+                                {{number_format($p->k4 / $perhitunganK4max,2)}}
                             </td>
                             <td>
-                                {{$p->k5 / $perhitunganK5max}}
+                                {{number_format($p->k5 / $perhitunganK5max,2)}}
                             </td>
                             <td>
-                                {{(($p->k1 / $perhitunganK1max) * $k1) + (($perhitunganK2min / $p->k2) * $k2) + (($p->k3 / $perhitunganK3max) * $k3) + (($p->k4 / $perhitunganK4max) * $k4) + (($p->k5 / $perhitunganK5max) * $k5)}}
+                                {{number_format((($p->k1 / $perhitunganK1max) * $k1) + (($perhitunganK2min / $p->k2) * $k2) + (($p->k3 / $perhitunganK3max) * $k3) + (($p->k4 / $perhitunganK4max) * $k4) + (($p->k5 / $perhitunganK5max) * $k5), 2)}}
                             </td>
                         </tr>
                         @endforeach
