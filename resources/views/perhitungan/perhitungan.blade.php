@@ -110,19 +110,19 @@
                                 {{$p->karyawan->nama}}
                             </td>
                             <td>
-                                {{$p->k1_sebelum}}
+                                {{$p->k1}}
                             </td>
                             <td>
-                                {{$p->k2_sebelum}}
+                                {{$p->k2}}
                             </td>
                             <td>
-                                {{$p->k3_sebelum}}
+                                {{$p->k3}}
                             </td>
                             <td>
-                                {{$p->k4_sebelum}}
+                                {{$p->k4}}
                             </td>
                             <td>
-                                {{$p->k5_sebelum}}
+                                {{$p->k5}}
                             </td>
                         </tr>
                         @endforeach
@@ -185,22 +185,22 @@
                                 {{$p->karyawan->nama}}
                             </td>
                             <td>
-                                {{$p->k1_sesudah}}
+                                {{$p->k1 / $perhitunganK1max}}
                             </td>
                             <td>
-                                {{$p->k2_sesudah}}
+                                {{$perhitunganK2min / $p->k2}}
                             </td>
                             <td>
-                                {{$p->k3_sesudah}}
+                                {{$p->k3 / $perhitunganK3max}}
                             </td>
                             <td>
-                                {{$p->k4_sesudah}}
+                                {{$p->k4 / $perhitunganK4max}}
                             </td>
                             <td>
-                                {{$p->k5_sesudah}}
+                                {{$p->k5 / $perhitunganK5max}}
                             </td>
                             <td>
-                                {{$p->total}}
+                                {{(($p->k1 / $perhitunganK1max) * $k1) + (($perhitunganK2min / $p->k2) * $k2) + (($p->k3 / $perhitunganK3max) * $k3) + (($p->k4 / $perhitunganK4max) * $k4) + (($p->k5 / $perhitunganK5max) * $k5)}}
                             </td>
                         </tr>
                         @endforeach

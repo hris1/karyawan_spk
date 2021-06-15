@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\SubKriteria;
+use App\Kriteria;
 use App\Karyawan;
 use App\Alternatif;
 use App\Perhitungan;
@@ -76,9 +77,32 @@ class HitungController extends Controller
      */
     public function show()
     {
-        $perhitungan = Perhitungan::orderBy('total','desc')->paginate(10);
+        $perhitungan = Perhitungan::all();
 
-        return view('perhitungan.perhitungan', compact('perhitungan'));
+        $perhitunganK1max = Perhitungan::max('k1');
+        $perhitunganK2max = Perhitungan::max('k2');
+        $perhitunganK3max = Perhitungan::max('k3');
+        $perhitunganK4max = Perhitungan::max('k4');
+        $perhitunganK5max = Perhitungan::max('k5');
+
+        $perhitunganK1min = Perhitungan::min('k1');
+        $perhitunganK2min = Perhitungan::min('k2');
+        $perhitunganK3min = Perhitungan::min('k3');
+        $perhitunganK4min = Perhitungan::min('k4');
+        $perhitunganK5min = Perhitungan::min('k5');
+
+        $k1 = Kriteria::where('kode', 'k1')->firstOrFail()->bobot;
+        $k2 = Kriteria::where('kode', 'k2')->firstOrFail()->bobot;
+        $k3 = Kriteria::where('kode', 'k3')->firstOrFail()->bobot;
+        $k4 = Kriteria::where('kode', 'k4')->firstOrFail()->bobot;
+        $k5 = Kriteria::where('kode', 'k5')->firstOrFail()->bobot;
+
+        // dd($k1);
+
+        return view('perhitungan.perhitungan', compact('perhitungan', 'perhitunganK1max',
+        'perhitunganK2max','perhitunganK3max','perhitunganK4max','perhitunganK5max',
+        'perhitunganK1min','perhitunganK2min','perhitunganK3min','perhitunganK4min','perhitunganK5min',
+        'k1', 'k2', 'k3', 'k4', 'k5'));
     }
 
     /**

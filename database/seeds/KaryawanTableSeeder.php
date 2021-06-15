@@ -14,20 +14,11 @@ class KaryawanTableSeeder extends Seeder
     {
         // Karyawan::create([
         //     'no_pendaftaran'=>'1',
-        //     'nama'=>'Haris Arifin',
+        //     'nama'=>'Albert',
         //     'alamat'=>'Jember',
         //     'jenis_kelamin'=>'Laki-laki',
-        //     'usia'=>'24',
+        //     'usia'=>'52',
         //     'no_telp'=>'082255333887',
-        // ]);
-
-        // Karyawan::create([
-        //     'no_pendaftaran'=>'2',
-        //     'nama'=>'Yunita',
-        //     'alamat'=>'Jember',
-        //     'jenis_kelamin'=>'Perempuan',
-        //     'usia'=>'22',
-        //     'no_telp'=>'082257765387',
         // ]);
     }
 }

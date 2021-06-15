@@ -58,7 +58,7 @@ class SubKriteriaTableSeeder extends Seeder
             'nilai_max'=>25,
             'kategori'=>'(Kategori Usia 1)',
             'crips'=>'-',
-            'bobot'=>100,
+            'bobot'=>20,
         ]);
 
         SubKriteria::create([
@@ -67,7 +67,7 @@ class SubKriteriaTableSeeder extends Seeder
             'nilai_max'=>30,
             'kategori'=>'(Kategori Usia 2)',
             'crips'=>'-',
-            'bobot'=>80,
+            'bobot'=>40,
         ]);
 
         SubKriteria::create([
@@ -85,7 +85,7 @@ class SubKriteriaTableSeeder extends Seeder
             'nilai_max'=>50,
             'kategori'=>'(Kategori Usia 4)',
             'crips'=>'-',
-            'bobot'=>40,
+            'bobot'=>80,
         ]);
 
         SubKriteria::create([
@@ -94,7 +94,7 @@ class SubKriteriaTableSeeder extends Seeder
             'nilai_max'=>55,
             'kategori'=>'(Kategori Usia 5)',
             'crips'=>'-',
-            'bobot'=>20,
+            'bobot'=>100,
         ]);
 
 
