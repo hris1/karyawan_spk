@@ -16,17 +16,17 @@ class CreatePerhitungansTable extends Migration
         Schema::create('perhitungans', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('karyawan_id');
-            $table->integer('k1_sebelum');
-            $table->integer('k2_sebelum');
-            $table->integer('k3_sebelum');
-            $table->integer('k4_sebelum');
-            $table->integer('k5_sebelum');
-            $table->float('k1_sesudah');
-            $table->float('k2_sesudah');
-            $table->float('k3_sesudah');
-            $table->float('k4_sesudah');
-            $table->float('k5_sesudah');
-            $table->float('total');
+            $table->integer('k1');
+            $table->integer('k2');
+            $table->integer('k3');
+            $table->integer('k4');
+            $table->integer('k5');
+            // $table->float('k1_sesudah');
+            // $table->float('k2_sesudah');
+            // $table->float('k3_sesudah');
+            // $table->float('k4_sesudah');
+            // $table->float('k5_sesudah');
+            // $table->float('total');
             $table->timestamps();
         });
     }
